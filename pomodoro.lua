@@ -1,11 +1,12 @@
 -- Author: François de Metz
 
-local widget = widget
-local image = image
-local timer = timer
-local awful = require("awful")
-local naughty = require("naughty")
+local widget    = widget
+local image     = image
+local timer     = timer
+local awful     = require("awful")
+local naughty   = require("naughty")
 local beautiful = require("beautiful")
+local math      = require("math")
 
 module("pomodoro")
 
@@ -66,7 +67,8 @@ pomodoro_tooltip = awful.tooltip({
                                     objects = { pomodoro },
                                     timer_function = function()
                                                         if pomodoro_timer.started then
-                                                           return 'End in ' .. (pomodoro_time - pomodoro_nbsec) .. ' s'
+                                                           r = (pomodoro_time - pomodoro_nbsec) % 60
+                                                           return 'End in ' .. math.floor((pomodoro_time - pomodoro_nbsec) / 60) .. ' min ' .. r
                                                         else
                                                            return 'pomodoro not started'
                                                         end
