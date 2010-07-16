@@ -37,7 +37,7 @@ local function pomodoro_start()
 
 local function pomodoro_stop()
     pomodoro_timer:stop(pomodoro_timer)
-    pomodoro_tooltip_timer:start(pomodoro_tooltip_timer)
+    pomodoro_tooltip_timer:stop(pomodoro_tooltip_timer)
     pomodoro_nbsec = 0
     pomodoro.bg    = beautiful.bg_urgent
 end
