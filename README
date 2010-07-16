@@ -1,0 +1,16 @@
+Pomodoro Widget
+==============
+
+In you rc.lua:
+
+   require("pomodoro")
+   
+   -- widget are now available via:
+   pomodoro.pomodoro
+
+Add it to your wibox:
+
+    mywibox[s].widgets = {
+        pomodoro.pomodoro,
+        mytextclock,
+    }
