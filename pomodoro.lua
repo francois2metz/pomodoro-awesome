@@ -36,9 +36,13 @@ local function pomodoro_start()
  end
 
 local function pomodoro_stop()
-    pomodoro_timer:stop(pomodoro_timer)
-    pomodoro_tooltip_timer:stop(pomodoro_tooltip_timer)
-    pomodoro_nbsec = 0
+   pomodoro_timer:stop(pomodoro_timer)
+   pomodoro_tooltip_timer:stop(pomodoro_tooltip_timer)
+   pomodoro_nbsec = 0
+end
+
+local function pomodoro_end()
+    pomodoro_stop()
     pomodoro.bg    = beautiful.bg_urgent
 end
 
@@ -50,7 +54,7 @@ local function pomodoro_notify(text)
 end
 
 pomodoro_timer:add_signal("timeout", function(c) 
-                                          pomodoro_stop()
+                                          pomodoro_end()
                                           pomodoro_notify('Ended')  
                                        end)
 
