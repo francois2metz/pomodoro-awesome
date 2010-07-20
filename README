@@ -1,10 +1,12 @@
 Pomodoro Widget
-==============
+===============
 
 In you rc.lua:
 
+
+   // insert after require("beautiful")
    require("pomodoro")
-   
+
    -- widget are now available via:
    pomodoro.pomodoro
 
