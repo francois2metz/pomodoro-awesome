@@ -13,11 +13,7 @@ module("pomodoro")
 -- 25 min
 local pomodoro_time = 60 * 25
 
---if beautiful.pomodoro then 
---   local pomodoro_image_path = beautiful.pomodoro
---else
-local pomodoro_image_path = awful.util.getdir("config") .."/pomodoro.png"
---end
+local pomodoro_image_path = beautiful.pomodoro_icon or awful.util.getdir("config") .."/pomodoro.png"
 
 -- setup widget
 local pomodoro_image = image(pomodoro_image_path)

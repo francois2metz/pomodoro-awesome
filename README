@@ -1,6 +1,9 @@
 Pomodoro Widget
 ===============
 
+Usage
+-----
+
 In you rc.lua:
 
 
@@ -16,3 +19,10 @@ Add it to your wibox:
         pomodoro.pomodoro,
         mytextclock,
     }
+
+Customization
+-------------
+
+If you want change the default icon, you can use beautiful:
+
+beautiful.pomodoro_icon = '/your/path/to/pomodoro/icon'
