@@ -2,7 +2,7 @@
 
 ## Usage
 
-    cd .config/awesome
+    cd ~/.config/awesome
     git clone git://github.com/francois2metz/pomodoro-awesome.git pomodoro
 
 In you rc.lua:
@@ -25,7 +25,7 @@ Add it to your wibox:
 
 If you want change the default icon, you can use beautiful:
 
-beautiful.pomodoro_icon = '/your/path/to/pomodoro/icon'
+    beautiful.pomodoro_icon = '/your/path/to/pomodoro/icon'
 
 ## License
 
