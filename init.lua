@@ -7,13 +7,14 @@ local awful     = require("awful")
 local naughty   = require("naughty")
 local beautiful = require("beautiful")
 local math      = require("math")
+local setmetatable = setmetatable
 
 module("pomodoro")
 
 -- 25 min
 local pomodoro_time = 60 * 25
 
-local pomodoro_image_path = beautiful.pomodoro_icon or awful.util.getdir("config") .."/pomodoro.png"
+local pomodoro_image_path = beautiful.pomodoro_icon or awful.util.getdir("config") .."/pomodoro/pomodoro.png"
 
 -- setup widget
 local pomodoro_image = image(pomodoro_image_path)
@@ -84,3 +85,5 @@ end
 pomodoro:buttons(awful.util.table.join(
                     awful.button({ }, 1, pomodoro_start_timer)
               ))
+
+setmetatable(_M, { __call = function () return pomodoro end })

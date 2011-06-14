@@ -4,19 +4,22 @@ Pomodoro Widget
 Usage
 -----
 
+    cd .config/awesome
+    git clone git://github.com/francois2metz/pomodoro-awesome.git pomodoro
+
 In you rc.lua:
 
 
    // insert after require("beautiful")
    require("pomodoro")
 
-   -- widget are now available via:
-   pomodoro.pomodoro
+   -- widget is now available via:
+   pomodoro()
 
 Add it to your wibox:
 
     mywibox[s].widgets = {
-        pomodoro.pomodoro,
+        pomodoro(),
         mytextclock,
     }
 
