@@ -8,7 +8,7 @@
 In you rc.lua:
 
 
-    // insert after require("beautiful")
+    // insert after beautiful.init("...")
     require("pomodoro")
 
     -- widget is now available via:
