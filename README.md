@@ -7,19 +7,22 @@
 
 In you rc.lua:
 
+```lua
+-- insert after beautiful.init("...")
+require("pomodoro")
 
-    // insert after beautiful.init("...")
-    require("pomodoro")
-
-    -- widget is now available via:
-    pomodoro()
+-- widget is now available via:
+pomodoro()
+```
 
 Add it to your wibox:
 
-    mywibox[s].widgets = {
-        pomodoro(),
-        mytextclock,
-    }
+```lua
+mywibox[s].widgets = {
+    pomodoro(),
+    mytextclock,
+}
+```
 
 ## Customization
 
@@ -29,12 +32,12 @@ If you want change the default icon, you can use beautiful:
 
 ## License
 
-Copyright 2010-2011 François de Metz
+Copyright 2010-2012 François de Metz
 
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
                     Version 2, December 2004
 
-    Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
+    Copyright (C) 2012 François de Metz
 
     Everyone is permitted to copy and distribute verbatim or modified
     copies of this license document, and changing it is allowed as long
