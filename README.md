@@ -9,17 +9,16 @@ In you rc.lua:
 
 ```lua
 -- insert after beautiful.init("...")
-require("pomodoro")
+pomodoro = require("pomodoro")
 
--- widget is now available via:
-pomodoro()
+-- widget is now available in pomodoro:
 ```
 
 Add it to your wibox:
 
 ```lua
 mywibox[s].widgets = {
-    pomodoro(),
+    pomodoro,
     mytextclock,
 }
 ```
